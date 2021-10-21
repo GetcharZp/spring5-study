@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<bean id="dog" class="cn.getcharzp.pojo.Dog" >-->
+        <!--<property name="name" value="dog name" />-->
+    <!--</bean>-->
+    <!--<bean id="user" class="cn.getcharzp.pojo.User" >-->
+        <!--<property name="name" value="user name" />-->
+        <!--<property name="dog" ref="dog" />-->
+    <!--</bean>-->
+
+    <!--<context:annotation-config/>-->
+    <!-- 方法一：通过注解的方式来实现自动装配 -->
+    <context:component-scan base-package="cn.getcharzp.pojo" />
+
+    <bean id="dog" class="cn.getcharzp.pojo.Dog">
+        <property name="name" value="dog3 name" />
+    </bean>
+    <bean id="dog4" class="cn.getcharzp.pojo.Dog">
+        <property name="name" value="dog3 name" />
+    </bean>
+    <bean id="user3" class="cn.getcharzp.pojo.User" autowire="byName">
+        <property name="name" value="user3 name" />
+    </bean>
+
+</beans>

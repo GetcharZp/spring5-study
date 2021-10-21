@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="cn.getcharzp.pojo.User">
+        <property name="name" value="name"/>
+        <property name="password" value="password"/>
+    </bean>
+
+    <bean id="user2" class="cn.getcharzp.pojo.User">
+        <constructor-arg name="name" value="name-c" />
+        <constructor-arg name="password" value="password-c" />
+    </bean>
+
+    <bean id="user3" class="cn.getcharzp.pojo.User" p:name="name-p" p:password="password-p" />
+
+    <bean id="user4" class="cn.getcharzp.pojo.User" c:name="name--c" c:password="password--c" />
+
+</beans>

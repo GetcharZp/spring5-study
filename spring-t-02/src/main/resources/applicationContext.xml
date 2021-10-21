@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="other" class="cn.getcharzp.pojo.Other">
+        <property name="name" value="naem - other" />
+    </bean>
+
+    <bean id="user" class="cn.getcharzp.pojo.User">
+        <property name="id" value="12" />
+        <property name="name" value="userName" />
+        <property name="arr">
+            <array>
+                <value>arr value1</value>
+                <value>arr value2</value>
+                <value>arr value3</value>
+            </array>
+        </property>
+        <property name="set">
+            <set>
+                <value>set value1</value>
+                <value>set value2</value>
+                <value>set value3</value>
+            </set>
+        </property>
+        <property name="list">
+            <list>
+                <value>list value1</value>
+                <value>list value2</value>
+                <value>list value3</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="value1" />
+                <entry key="2" value="value2" />
+                <entry key="3" value="value3" />
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p-key1">p value 1</prop>
+                <prop key="p-key2">p value 2</prop>
+                <prop key="p-key3">p value 3</prop>
+            </props>
+        </property>
+        <property name="other" ref="other" />
+    </bean>
+
+</beans>
